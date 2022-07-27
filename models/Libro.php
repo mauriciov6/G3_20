@@ -63,6 +63,7 @@
             $sql->binValue(1, $codigo_de_libro);            
             $sql->excute();
             return $resultado=$sql->fetchAll(PDO::FECH_ASSOC);
+            
         }
     }
 ?>
