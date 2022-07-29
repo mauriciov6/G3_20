@@ -18,7 +18,7 @@
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $codigo_de_libro);            
             $sql->execute();
-            return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
+            return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);            
         }
 
         public function insert_libro ($codigo_de_libro, $nombre_libro, $escritor_libro, $fecha_publicacion, $isbn, $precio, $editorial){
