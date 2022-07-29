@@ -21,13 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     switch($_GET["opc"]){
         
 
-        case "get_alquiler": 
-            $datos=$alquiler->get_alquiler();
+        case "get_alquileres": 
+            $datos=$alquiler->get_alquileres();
             echo json_encode($datos);
         break;
 
-        case "get_alquileres": 
-            $datos=$alquiler->get_alquileres($body["codigo_de_libro"]);
+        case "get_alquiler": 
+            $datos=$alquiler->get_alquiler($body["codigo_de_libro"]);
             echo json_encode($datos);
         break;
 

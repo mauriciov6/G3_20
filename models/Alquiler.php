@@ -2,7 +2,7 @@
 
     class Alquiler extends Conectar {
 
-        public function get_alquiler(){
+        public function get_alquileres(){
             $conectar = parent::conexion();
             parent::set_names();
             $sql="SELECT * FROM alquiler";
@@ -11,7 +11,7 @@
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        public function get_alquileres($codigo_de_libro){
+        public function get_alquiler($codigo_de_libro){
             $conectar = parent::conexion();
             parent::set_names();
             $sql="SELECT * FROM alquiler where codigo_de_libro = ?";
