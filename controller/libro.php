@@ -29,7 +29,7 @@
                 $datos=$libro->get_libro($body["codigo_de_libro"]);
 
                 if ($datos==null){
-                    print"El código de libro no existe";
+                    echo json_encode("El código de libro no existe");
                 }
                 else{
                     echo json_encode($datos);
@@ -44,12 +44,12 @@
             
             case "UpdateLibro";
                 $datos=$libro->update_libro($body["codigo_de_libro"], $body["nombre_libro"], $body["escritor_libro"], $body["fecha_publicacion"], $body["isbn"], $body["precio"], $body["editorial"]);
-                echo json_encode("Libro Actualizado");
+                    echo json_encode("Libro Actualizado");               
             break;  
 
             case "DeleteLibro":
                 $datos=$libro->delete_libro($body["codigo_de_libro"]);
-                echo json_encode("Libro Eliminado");
+                    echo json_encode("Libro Eliminado");                                
             break;            
         }
 ?>
