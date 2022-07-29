@@ -48,7 +48,7 @@
             break;  
 
             case "DeleteLibro":
-                $datos=$libro->get_libro($body["codigo_de_libro"]);
+                $datos=$libro->delete_libro($body["codigo_de_libro"]);
                 echo json_encode("Libro Eliminado");
             break;
         }
